@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+ 
+  <display-name>CRUD SpringMvc_Hibernate_Primefaces</display-name>
+    
+  <!--   ==================  LISTENERS ====================  -->        
+ 
+  <listener>
+	<listener-class>
+		org.springframework.web.context.ContextLoaderListener
+	</listener-class>
+  </listener>
+  <listener>
+	<listener-class>
+		org.springframework.web.context.request.RequestContextListener
+	</listener-class>
+  </listener>
+
+
+
+    <!--   ==================PrimeFaces ====================  -->
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+	<!-- 	<param-value>sunny</param-value>    -->
+	<!-- 	<param-value>bluesky</param-value>    -->
+	<!-- 	<param-value>luna-blue</param-value>   --> 		
+	<!-- 	<param-value>blitzer</param-value>  -->
+		<param-value>excite-bike</param-value>  	
+	<!--    <param-value>ui-lightness</param-value>   -->
+	<!-- 	   <param-value>bootstrap</param-value>  	 -->
+	<!-- 	<param-value>south-street</param-value>   	 -->		    	    
+	</context-param>
+	
+	<!-- for FontAwesome -->
+	<context-param>
+		<param-name>primefaces.FONT_AWESOME</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+
+
+    <!--   ==================JSF  JAVA Server Faces ====================  -->
+	<context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+	<welcome-file-list>
+		<welcome-file>Index.xhtml</welcome-file>
+	</welcome-file-list>    
+    
+</web-app>

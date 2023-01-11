@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+	<title>home</title>
+	<style type="text/css">
+	/*Center login form */
+#SectionHome {
+	width: 500px;
+	height: 300px;
+	position: absolute; 
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+	overflow: auto;
+}
+</style>
+</h:head>
+<h:body>
+	<h:div id="SectionHome">
+		<p:fieldset id="addForm" legend="Ejercicio de Operaciones CRUD">
+			<p:growl id="growl" sticky="true" showDetail="true" life="3000" />
+			<h:panelGrid columns="2" cellpadding="5">
+								
+				<p:commandButton value="CRUD Primefaces ... " update="growl"
+					action="#{HomeController.ReporteContactosPrimefaces}" />
+			</h:panelGrid>
+		</p:fieldset>
+	</h:div>
+</h:body>
+</html>
